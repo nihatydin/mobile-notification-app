@@ -45,8 +45,6 @@ export default function App() {
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));
-
-    //console.log(data && data);
   };
 
   useEffect(() => {
@@ -73,6 +71,8 @@ export default function App() {
     }
     getApi();
   }, [lightThema, isEnabled]);
+
+  data && console.log(data);
 
   return (
     <SafeAreaProvider>
